@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Menu</title>
+  </head>
+  <body>
+    <section class="menu">
+      <!-- TITLE -->
+      <div class="title">
+        <h2>Our Menu</h2>
+        <div class="underline"></div>
+      </div>
+      <!-- FILTER BUTTONS -->
+      <div class="btn-container">
+        <button class="filter-btn" type="button" data-id="all">all</button>
+        <button class="filter-btn" type="button" data-id="breakfast">breakfast</button>
+        <button class="filter-btn" type="button" data-id="lunch">lunch</button>
+        <button class="filter-btn" type="button" data-id="shakes">shakes</button>
+      </div>
+      <!-- MENU ITEMS -->
+      <div class="section-center">
+        <!-- SINGLE ITEM -->
+        <article class="menu-item">
+          <img src="menu-item.jpeg" alt="Menu Item" class="photo" />
+          <div class="item-info">
+            <header>
+              <h4>Butter Milk Pancakes</h4>
+              <h4 class="price">$15</h4>
+            </header>
+            <p class="item-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque quibusdam quaerat reprehenderit a aperiam? Voluptatem unde dolore blanditiis obcaecati odio?
+            </p>
+          </div>
+        </article>
+        <!-- END OF SINGLE ITEM -->
+      </div>
+    </section>
+    <!--JAVASCRIPT-->
+    <script src="app.js"></script>
+  </body>
+</html>

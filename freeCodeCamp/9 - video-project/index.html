@@ -6,11 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Font Awesome--> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/style.css" />
-    <title>Q&A</title>
+    <!-- TITLE -->
+    <title>Video</title>
   </head>
   <body>
-    
+    <!-- PRELOADER -->
+    <div class="preloader">
+      <img src="preloader.gif" alt="preload">
+    </div>
+    <!-- HEADER -->
+    <header>
+      <video class="video-container" muted autoplay loop>
+        <source src="video.mp4" type="video/mp4">
+      </video>
+      <h1>video project</h1>
+      <!-- Video Switch -->
+      <button class="switch-btn">
+        <span>
+          play
+        </span>
+        <span>
+          pause
+        </span>
+        <span class="switch">
+          
+        </span>
+      </button>
+    </header>
     <!--JAVASCRIPT-->
     <script src="app.js"></script>
   </body>
