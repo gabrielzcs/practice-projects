@@ -1,37 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Age calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <!--Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/style.css" />
+    <!-- TITLE -->
+    <title>Age Calculator App</title>
+  </head>
+  <body>
+    <section class="container">
+      <div class="main-container">
+        <div class="info-container">
+          <div class="day info">
+            <h1>day</h1>
+            <input type="number" placeholder="DD" />
+            <p class="error-day"></p>
+          </div>
+          <div class="month info">
+            <h1>month</h1>
+            <input type="number" placeholder="MM" />
+            <p class="error-month"></p>
+          </div>
+          <div class="year info">
+            <h1>year</h1>
+            <input type="number" placeholder="YYYY" />
+            <p class="error-year"></p>
+          </div>
+        </div>
+        <div class="line">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="56"
+            height="54"
+            viewBox="0 0 46 44"
+            class="svg"
+          >
+            <g fill="none" stroke="#FFFFFF" stroke-width="2">
+              <path
+                d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"
+              />
+            </g>
+          </svg>
+        </div>
+        <div class="result-container">
+          <div class="result">
+            <h1 class="result-year">--</h1>
+            <h2>years</h2>
+          </div>
+          <div class="result">
+            <h1 class="result-month">--</h1>
+            <h2>months</h2>
+          </div>
+          <div class="result">
+            <h1 class="result-day">--</h1>
+            <h2>days</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--JAVASCRIPT-->
+    <script src="app.js"></script>
+  </body>
 </html>

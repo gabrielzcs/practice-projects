@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap");
+
+:root {
+  /* CORES PRIMARIAS */
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+
+  /* NEUTRAS */
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  text-transform: uppercase;
+  background-color: var(--off-white);
+}
+.container {
+  height: 100vh;
+  position: relative;
+}
+
+.main-container {
+  width: 420px;
+  height: 550px;
+  background-color: white;
+  margin: auto;
+  padding: 30px;
+  border-radius: 25px 25px 25% 25px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2em;
+}
+
+.info > h1 {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--smokey-grey);
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 6.7rem;
+  padding: 0.5rem;
+  border: 1px solid var(--light-grey);
+  border-radius: 10px;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--off-black);
+}
+
+.line {
+  height: 1px;
+  background-color: lightgray;
+  margin: 50px 0px;
+}
+
+.svg {
+  position: relative;
+  top: -26px;
+  right: -152px;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: var(--purple);
+}
+
+.svg:hover {
+  background-color: var(--off-black);
+}
+
+.result {
+  display: flex;
+  font-size: 2.5rem;
+  font-style: italic;
+  text-transform: lowercase;
+}
+
+.result > h1 {
+  color: var(--purple);
+  letter-spacing: 8px;
+}
+
+.result > h2 {
+  color: var(--off-black);
+}
+
+@media (min-width: 780px) {
+  .main-container {
+    width: 750px;
+    height: 680px;
+    padding: 55px;
+  }
+
+  .info-container {
+    justify-content: left;
+  }
+
+  .info {
+    margin-right: 1.6rem;
+  }
+
+  input {
+    width: 10rem;
+  }
+
+  .line {
+    margin-top: 50px;
+  }
+
+  .svg {
+    right: -590px;
+  }
+
+  .arrow {
+    text-align: right;
+  }
+
+  .result {
+    font-size: 3.5rem;
+  }
+}
