@@ -1,52 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  <!-- Sign-up form start -->
-
-  Stay updated!
-
-  Join 60,000+ product managers receiving monthly updates on:
-
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
-
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  <!-- Success message end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/style.css" />
+    <!-- TITLE -->
+    <title>Newsletter</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container">
+        <div class="img">
+          <img
+            src="assets/images/illustration-sign-up-mobile.svg"
+            alt="Front Image"
+            id="mobile-img"
+          />
+        </div>
+        <div class="img-desktop">
+          <img
+            src="assets/images/illustration-sign-up-desktop.svg"
+            alt="Front image"
+            id="desktop-img"
+          />
+        </div>
+        <div class="content-container">
+          <div class="title">
+            <h1>Stay updated!</h1>
+          </div>
+          <div class="content">
+            <p class="text">
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+            <p class="text">
+              <img
+                src="assets/images/icon-list.svg"
+                alt="Checkmark"
+                class="checkmark"
+              />Product discovery and building what matters
+            </p>
+            <p class="text">
+              <img
+                src="assets/images/icon-list.svg"
+                alt="Checkmark"
+                class="checkmark"
+              />Measuring to ensure updates are a success
+            </p>
+            <p class="text">
+              <img
+                src="assets/images/icon-list.svg"
+                alt="Checkmark"
+                class="checkmark"
+              />And much more!
+            </p>
+          </div>
+          <div class="form">
+            <p>Email address</p>
+            <input type="text" placeholder="email@company.com" />
+            <button type="submit" class="btn">
+              Subscribe to monthly newsletter
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SUCCESS MESSAGE -->
+    <div class="success-container">
+      <div class="success-body">
+        <div class="success-checkmark">
+          <img src="assets/images/icon-success.svg" alt="Success icon" />
+        </div>
+        <div class="success-message">
+          <h1>Thanks for subscribing!</h1>
+          <p>
+            A confirmation email has been sent to
+            <span>ash@loremcompany.com</span>. Please open it and click the
+            button inside to confirm your subscription.
+          </p>
+        </div>
+      </div>
+      <button class="dismiss">Dismiss message</button>
+    </div>
+    <!--JAVASCRIPT-->
+    <script src="app.js"></script>
+  </body>
 </html>
