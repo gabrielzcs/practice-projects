@@ -164,7 +164,7 @@ input {
   );
 }
 
-@media (min-width: 450px) and (min-width: 451px) {
+@media (min-width: 450px) and (min-width: 455px) {
   body {
     background-color: var(--Charcoal-Grey);
   }
