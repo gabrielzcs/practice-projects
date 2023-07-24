@@ -8,6 +8,7 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
+  border: none;
 }
 
 :root {
@@ -58,11 +59,21 @@
   padding-bottom: 20px;
 }
 
+.form-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .form p {
   padding-bottom: 10px;
   font-size: 0.8rem;
   font-weight: 700;
   color: var(--Dark-Slate-Grey);
+}
+
+.email-error {
+  color: var(--Tomato);
+  font-size: 0.8rem;
 }
 
 input {

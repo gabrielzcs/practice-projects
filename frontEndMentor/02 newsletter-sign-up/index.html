@@ -65,8 +65,19 @@
             </p>
           </div>
           <div class="form">
-            <p>Email address</p>
-            <input type="text" placeholder="email@company.com" />
+            <div class="form-container">
+              <label for="email">
+                <p>Email address</p>
+              </label>
+              <span class="email-error"></span>
+            </div>
+            <input
+              type="email"
+              id="email"
+              spellcheck="false"
+              placeholder="email@company.com"
+              class="email"
+            />
             <button type="submit" class="btn">
               Subscribe to monthly newsletter
             </button>
@@ -82,7 +93,7 @@
         </div>
         <div class="success-message">
           <h1>Thanks for subscribing!</h1>
-          <p>
+          <p class="confirmation">
             A confirmation email has been sent to
             <span>ash@loremcompany.com</span>. Please open it and click the
             button inside to confirm your subscription.
