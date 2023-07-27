@@ -40,11 +40,29 @@ body {
 }
 
 .person-container {
-  height: ;
+  background-color: var(--dark-blue);
+  height: 150px;
+  border-radius: 10px;
 }
 
 .person-info {
-  background-color: var(--pale-blue);
+  background-color: var(--desaturated-blue);
+  height: 100px;
+}
+
+.person-info img {
+  display: inline-block;
+  max-width: 60px;
+  max-height: 60px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.daily-weekly-monthly {
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 @media (min-witdh: 812px) {
