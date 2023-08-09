@@ -19,17 +19,24 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 0.1rem;
 }
 
 body {
 }
 
-.header {
+.main-container {
   max-width: 450px;
+  display: block;
 }
 
-.header-img {
+.header-img-mobile {
   width: 100%;
+  display: block;
+}
+
+.header-img-desktop {
+  display: none;
 }
 
 .card-back-img {
@@ -66,7 +73,7 @@ body {
   top: 245px;
   right: 118px;
   color: white;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
 .card-name {
@@ -75,6 +82,7 @@ body {
   right: 295px;
   color: white;
   text-transform: uppercase;
+  font-size: 0.75rem;
 }
 
 .card-date {
@@ -86,12 +94,20 @@ body {
 
 .info {
   margin: 80px 20px;
+  display: block;
+}
+
+.info-active {
+  display: none;
+}
+
+.info div {
+  margin: 50px 0 0 0;
 }
 
 .info label {
   color: var(--very-dark-violet);
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
 }
 
 .info input {
@@ -101,25 +117,159 @@ body {
   width: 100%;
   border: 1px solid var(--light-grayish-violet);
   color: var(--dark-grayish-violet);
-  margin-bottom: 25px;
-}
-
-.date-cvc {
-  display: grid;
-  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  margin-top: 5px;
 }
 
 .date-label {
-  grid-column: 1 / 3;
+  /* grid-column: 1 / 3; */
+}
+
+.cvc-label {
+  position: relative;
+  left: 13px;
 }
 
 #month,
 #year {
+  width: 5.5rem;
 }
 
 #month {
-  grid-column: 1;
+  /* grid-column: 1; */
 }
 
 #cvc {
+  width: 52%;
+}
+
+.btn {
+  width: 100%;
+  height: 55px;
+  border-radius: 0.5rem;
+  background-color: var(--very-dark-violet);
+  color: var(--light-grayish-violet);
+  font-size: 1.1rem;
+}
+
+.success-msg {
+  display: none;
+}
+
+.success-msg-active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-msg {
+  margin-top: 100px;
+}
+
+.success-img {
+  margin-bottom: 30px;
+}
+
+.success-text h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--very-dark-violet);
+  margin-bottom: 15px;
+}
+
+.success-text p {
+  color: var(--dark-grayish-violet);
+}
+
+.continue-btn {
+  margin-top: 30px;
+  width: 90%;
+}
+
+.continue {
+  width: 100%;
+  height: 55px;
+  background-color: var(--very-dark-violet);
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.error {
+  color: red;
+}
+
+@media (min-width: 455px) {
+  body {
+  }
+
+  .main-container {
+    max-width: 1480px;
+    display: flex;
+  }
+
+  .header-img-mobile {
+    display: none;
+  }
+
+  .header-img-desktop {
+    display: block;
+    height: 100vh;
+  }
+
+  .card-back-img {
+    top: 450px;
+    left: 300px;
+  }
+
+  .card-cvc {
+    top: 535px;
+    left: 575px;
+  }
+
+  .card-front-img {
+    top: 230px;
+    left: 230px;
+  }
+
+  .card-logo {
+    top: 250px;
+    left: 250px;
+  }
+
+  .card-number {
+    top: 340px;
+    left: 250px;
+  }
+
+  .card-name {
+    top: 390px;
+    left: 250px;
+  }
+
+  .card-date {
+    top: 390px;
+    left: 490px;
+  }
+
+  .info {
+    display: block;
+    margin: 180px 280px;
+  }
+
+  .info-active {
+    display: none;
+  }
+
+  .success-msg {
+    display: none;
+  }
+
+  .success-msg-active {
+    display: flex;
+  }
+
+  .success-msg {
+    margin: 300px;
+  }
 }
