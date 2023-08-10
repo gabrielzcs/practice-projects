@@ -69,6 +69,7 @@ body {
 }
 
 .card-number {
+  width: 298px;
   position: absolute;
   top: 245px;
   right: 118px;
@@ -77,19 +78,30 @@ body {
 }
 
 .card-name {
+  width: 194px;
   position: absolute;
   top: 290px;
-  right: 295px;
+  right: 220px;
   color: white;
   text-transform: uppercase;
   font-size: 0.75rem;
 }
 
 .card-date {
+  width: 56px;
   position: absolute;
   top: 290px;
   right: 118px;
   color: white;
+}
+
+.slash {
+  top: 288px;
+  right: 93px;
+}
+
+.card-year {
+  right: 85px;
 }
 
 .info {
@@ -139,7 +151,7 @@ body {
 }
 
 #cvc {
-  width: 52%;
+  width: 13.7rem;
 }
 
 .btn {
@@ -195,8 +207,14 @@ body {
   font-size: 1rem;
 }
 
-.error {
+.error-hide {
+  display: none;
+}
+
+.error-show {
+  display: block;
   color: red;
+  font-size: 0.8rem;
 }
 
 @media (min-width: 455px) {
@@ -250,6 +268,15 @@ body {
   .card-date {
     top: 390px;
     left: 490px;
+  }
+
+  .card-year {
+    left: 520px;
+  }
+
+  .slash {
+    top: 388px;
+    left: 513px;
   }
 
   .info {
