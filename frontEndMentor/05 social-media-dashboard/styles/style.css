@@ -35,9 +35,9 @@
 
   /*  */
 
-  --top-line: 3px;
-  --border: 5px;
-  --margin: 25px;
+  --top-line: 0.1875rem;
+  --border: 0.3125rem;
+  --margin: 1.5625rem;
 
   --fw-light: 400;
   --fw-bold: 700;
@@ -56,11 +56,19 @@ body {
   background-color: var(--Very-Dark-Blue-BG);
 }
 
+body.dark-mode {
+  --Very-Dark-Blue-BG: hsl(0, 0%, 100%);
+  --Very-Dark-Blue-Top-BG-Pattern: hsl(225, 100%, 98%);
+  --Dark-Desaturated-Blue-Card-BG: hsl(227, 47%, 96%);
+  --Desaturated-Blue-Text: hsl(228, 12%, 44%);
+  --White-Text: hsl(230, 17%, 14%);
+}
+
 .main-container {
   display: flex;
   flex-direction: column;
   margin: auto;
-  max-width: 1500px;
+  max-width: 93.75rem;
 }
 
 .top-content {
@@ -68,24 +76,28 @@ body {
 }
 
 .top-content .text-p {
-  border-bottom: 1px solid var(--Dark-Grayish-Blue-Text);
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  border-bottom: 0.0625rem solid var(--Dark-Grayish-Blue-Text);
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+h1 {
+  color: var(--White-Text);
 }
 
 .text h1 {
-  color: white;
+  color: var(--White-Text);
   font-size: 1.9rem;
 }
 
 .text-h1 {
-  color: white;
+  color: var(--White-Text);
   font-size: 1rem;
 }
 
 .text p {
   font-weight: var(--fw-bold);
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
   font-size: 1rem;
 }
 
@@ -96,6 +108,21 @@ p {
 .toggle-theme {
   font-weight: var(--fw-bold);
   margin-bottom: var(--margin);
+  display: flex;
+  justify-content: space-between;
+}
+
+.toggle-theme i {
+  font-size: 2.1875rem;
+  color: var(--White-Text);
+  cursor: pointer;
+}
+
+.flip {
+  transform: scaleX(-1);
+}
+
+.toggle-theme p {
 }
 
 .followers-container {
@@ -107,7 +134,7 @@ p {
 .followers-item {
   width: 90%;
   background-color: var(--Dark-Desaturated-Blue-Card-BG);
-  margin: 15px 0;
+  margin: 0.9375rem 0;
   display: grid;
   grid-template: repeat(5, 0.6fr) / repeat(2, 1fr);
   border-radius: var(--border);
@@ -137,18 +164,18 @@ p {
 
 .svg {
   justify-self: end;
-  margin-right: 21px;
+  margin-right: 1.3125rem;
 }
 
 .account {
   font-size: 0.7rem;
   position: relative;
-  left: -15px;
-  top: 3px;
+  left: -0.9375rem;
+  top: 0.1875rem;
 }
 
 .numbers {
-  color: white;
+  color: (--White-Text);
   grid-column: 1/-1;
   justify-self: center;
   font-size: 3.2rem;
@@ -161,27 +188,27 @@ p {
   grid-column: 1/-1;
   justify-self: center;
   font-size: 0.6rem;
-  letter-spacing: 5px;
+  letter-spacing: 0.3125rem;
 }
 
 .up-arrow-text {
   color: var(--Lime-Green);
   font-size: 0.7rem;
   position: relative;
-  left: -13px;
-  top: -5px;
+  left: -0.8125rem;
+  top: -0.3125rem;
 }
 
 .down-arrow-text {
   color: var(--Bright-Red);
   font-size: 0.7rem;
   position: relative;
-  left: -13px;
-  top: -5px;
+  left: -0.8125rem;
+  top: -0.3125rem;
 }
 
 .middle-content {
-  margin: 33px 0 0 22px;
+  margin: 2.0625rem 0 0 1.375rem;
 }
 
 .overview-container {
@@ -192,11 +219,11 @@ p {
 
 .total-overview {
   background-color: var(--Dark-Desaturated-Blue-Card-BG);
-  margin: 13px 22px 13px 22px;
+  margin: 0.8125rem 1.375rem 0.8125rem 1.375rem;
   border-radius: var(--border);
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(3, 1fr);
-  padding: 25px;
+  padding: 1.5625rem;
 }
 
 .overview-title {
@@ -208,7 +235,7 @@ p {
 }
 
 .overview-number {
-  color: white;
+  color: (--White-Text);
   align-self: end;
 }
 
@@ -216,12 +243,12 @@ p {
   justify-self: end;
   align-self: end;
   position: relative;
-  top: -7px;
-  left: 55px;
+  top: -0.4375rem;
+  left: 3.4375rem;
 }
 
 .ov-arrow {
-  left: 75px;
+  left: 4.6875rem;
 }
 
 .overview-percentage {
@@ -234,14 +261,14 @@ p {
   color: var(--Bright-Red);
 }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
   .top-content {
     display: grid;
     grid-template: 1fr 1fr/ 1fr 1fr;
   }
 
   .top-content .text-p {
-    border-bottom: 0px;
+    border-bottom: 0rem;
   }
 
   .text-h1 {
@@ -252,14 +279,19 @@ p {
     justify-self: end;
   }
 
+  .toggle-theme p {
+    margin-right: 20px;
+    align-self: center;
+  }
+
   .followers-container {
     flex-direction: row;
     justify-content: center;
   }
 
   .followers-item {
-    margin: 0 13px;
-    max-width: 350px;
+    margin: 0 0.8125rem;
+    max-width: 21.875rem;
   }
 
   .middle-content {
@@ -273,7 +305,7 @@ p {
 
   .total-overview {
     flex: 20%;
-    max-width: 350px;
-    margin: 10px 13px;
+    max-width: 21.875rem;
+    margin: 0.625rem 0.8125rem;
   }
 }
