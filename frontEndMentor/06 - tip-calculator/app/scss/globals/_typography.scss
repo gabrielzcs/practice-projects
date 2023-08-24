@@ -1,13 +1,23 @@
+:root {
+  --font: "Space Mono", monospace;
+}
+
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-weight: 700;
   line-height: 1.1;
-  margin-top: 0;
+  margin: 0;
+  color: var(--Dark-grayish-cyan);
+}
+
+h2 {
+  font-size: 1.0625rem;
 }
 
 p {
-  margin-top: 0;
+  margin: 0;
 }
 
 a,

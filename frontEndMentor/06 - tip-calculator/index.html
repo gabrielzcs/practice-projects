@@ -17,7 +17,86 @@
     <!--JAVASCRIPT-->
     <script defer src="app/js/script.js"></script>
     <!-- TITLE -->
-    <title>Ola</title>
+    <title>Tip Calculator App</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <section class="title">
+        <img src="images/logo.svg" alt="Logo" />
+      </section>
+      <section class="main">
+        <!-- INPUT -->
+        <div class="input">
+          <!-- INPUT BILL -->
+          <div class="input__bill">
+            <label for="input__bill--input"
+              >Bill <img src="images/icon-dollar.svg" alt="Dollar Icon"
+            /></label>
+            <input class="input__bill--input" type="text" />
+          </div>
+          <!-- INPUT TIP -->
+          <div class="input__tip">
+            <h2>Select Tip %</h2>
+            <div class="input__tip--number">
+              <p>5%</p>
+            </div>
+            <div class="input__tip--number">
+              <p>10%</p>
+            </div>
+            <div class="input__tip--number">
+              <p>15%</p>
+            </div>
+            <div class="input__tip--number">
+              <p>25%</p>
+            </div>
+            <div class="input__tip--number">
+              <p>50%</p>
+            </div>
+            <input class="input__tip--input" type="text" placeholder="Custom" />
+          </div>
+          <!-- INPUT PEOPLE -->
+          <div class="input__people">
+            <label for="people">
+              Number of People
+              <img src="images/icon-person.svg" alt="Person Icon" />
+            </label>
+            <label
+              for="people"
+              class="input__people--error input__people--error-active"
+              >Can't be zero</label
+            >
+            <input
+              id="people"
+              class="input__people--input input__error"
+              type="text"
+            />
+          </div>
+        </div>
+        <!-- OUTPUT -->
+        <div class="output">
+          <!-- OUTPUT TIP -->
+          <div class="output__tip">
+            <h3>
+              Tip Amount <br />
+              <span>/ person</span>
+            </h3>
+
+            <h4>$<span class="output__tip--amount">4.27</span></h4>
+          </div>
+          <!-- OUTPUT TOTAL -->
+          <div class="output__total">
+            <h3>
+              Total <br />
+              <span>/ person</span>
+            </h3>
+            <h4>$<span class="output__total--amount">32.79</span></h4>
+          </div>
+          <!-- OUTPUT RESET -->
+          <div class="output__reset">
+            <button class="output__reset--button" type="button">RESET</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
