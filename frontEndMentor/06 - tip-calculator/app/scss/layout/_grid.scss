@@ -60,10 +60,15 @@ main {
       background-color: var(--Very-dark-cyan);
       color: var(--White);
       border-radius: 0.3125rem;
+      font-size: 1.5rem;
 
       p {
         font-size: 1.5625rem;
       }
+    }
+
+    &--number-active {
+      background-color: var(--Strong-cyan);
     }
 
     &--number:hover {
@@ -102,6 +107,10 @@ main {
     &--error-active {
       display: inline-block;
     }
+  }
+
+  &__error:focus {
+    border: 2px solid red;
   }
 
   &__error {

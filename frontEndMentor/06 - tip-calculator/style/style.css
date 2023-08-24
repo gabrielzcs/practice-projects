@@ -112,9 +112,13 @@ a:active {
   background-color: var(--Very-dark-cyan);
   color: var(--White);
   border-radius: 0.3125rem;
+  font-size: 1.5rem;
 }
 .input__tip--number p {
   font-size: 1.5625rem;
+}
+.input__tip--number-active {
+  background-color: var(--Strong-cyan);
 }
 .input__tip--number:hover {
   cursor: pointer;
@@ -145,6 +149,9 @@ a:active {
 }
 .input__people--error-active {
   display: inline-block;
+}
+.input__error:focus {
+  border: 2px solid red;
 }
 .input__error {
   border: 2px solid red;
