@@ -1,0 +1,270 @@
+@use "../utils/" as u;
+
+:root {
+  --Red: hsl(0, 100%, 68%);
+
+  --Very-Dark-Blue: hsl(230, 29%, 20%);
+  --Dark-Grayish-Blue: hsl(230, 11%, 40%);
+  --Grayish-Blue: hsl(231, 7%, 65%);
+  --Light-Grayish-Blue: hsl(207, 33%, 95%);
+
+  --font-Barlow: "Barlow", sans-serif;
+  --font-Barlow-condensed: "Barlow Condensed", sans-serif;
+
+  --margin: 2.7rem;
+}
+
+header {
+  margin: var(--margin);
+  position: relative;
+
+  @include u.breakpoint(large) {
+    --margin: 10rem;
+    margin: 2.7rem var(--margin) 2.7rem var(--margin);
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    align-self: flex-start;
+  }
+}
+
+.hamburger-menu {
+  display: block;
+  @include u.breakpoint(medium) {
+    display: none;
+  }
+}
+
+.hamburger-menu-hide {
+  display: none;
+}
+
+.close-menu {
+  display: none;
+}
+
+.close-menu-show {
+  display: block;
+  @include u.breakpoint(medium) {
+    display: none;
+  }
+}
+
+.nav {
+  display: none;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.11);
+  padding: 1rem 0 1rem 0;
+
+  &__show {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    position: absolute;
+    top: 3.75rem;
+    background-color: white;
+    width: 100%;
+    height: 255px;
+  }
+
+  &__item {
+    list-style: none;
+    color: white;
+    color: var(--Very-Dark-Blue);
+    text-transform: uppercase;
+    font-family: var(--font-Barlow-condensed);
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+
+    &--login {
+      color: var(--Grayish-Blue);
+
+      a:visited,
+      a:active,
+      a:hover {
+        color: var(--Grayish-Blue) !important;
+        text-decoration-color: var(--Grayish-Blue) !important;
+      }
+    }
+
+    a:visited,
+    a:hover {
+      color: var(--Very-Dark-Blue);
+      text-decoration: underline;
+    }
+  }
+
+  &__line {
+    width: 18.75rem;
+    height: 0.07rem;
+    background-color: var(--Light-Grayish-Blue);
+  }
+
+  @include u.breakpoint(medium) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 31.25rem;
+    padding: 0;
+    box-shadow: none;
+
+    &__line {
+      background-color: var(--Grayish-Blue);
+      width: 0.3125rem;
+      height: 0.3125rem;
+      border-radius: 50%;
+    }
+  }
+
+  @include u.breakpoint(large) {
+    margin-right: 3rem;
+  }
+}
+
+.nav__background {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  border-radius: 0 0 0 5rem;
+  background-color: var(--Light-Grayish-Blue);
+}
+
+main {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+
+  @include u.breakpoint(large) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.content {
+  margin: 5rem var(--margin) 0 var(--margin);
+
+  &__start {
+    p {
+      font-family: var(--font-Barlow-condensed);
+      font-stretch: condensed;
+      text-transform: uppercase;
+      color: var(--Dark-Grayish-Blue);
+      letter-spacing: 0.4rem;
+      font-size: 0.8rem;
+    }
+
+    span {
+      letter-spacing: 0.05rem;
+      display: inline-block;
+      border-radius: 20px;
+      text-align: center;
+      text-transform: uppercase;
+      width: 3.2rem;
+      height: 1.5rem;
+      margin-right: 1.2rem;
+      color: white;
+      background-color: var(--Very-Dark-Blue);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+  }
+
+  &__title {
+    margin-top: 1rem;
+    font-family: var(--font-Barlow-condensed);
+    text-transform: uppercase;
+    font-size: 1.45rem;
+    color: var(--Very-Dark-Blue);
+  }
+
+  &__text {
+    margin-top: 1rem;
+
+    p {
+      color: var(--Dark-Grayish-Blue);
+      font-size: 1.32rem;
+    }
+  }
+
+  &__schedule {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+    &--conteiner {
+      font-family: var(--font-Barlow-condensed);
+      width: 49%;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      border-radius: 0.4rem;
+      font-size: 1rem;
+    }
+
+    &--btn {
+      background-color: var(--Red);
+      font-weight: 700;
+      color: white;
+      letter-spacing: 0.07rem;
+    }
+
+    &--btn:hover {
+      cursor: pointer;
+    }
+
+    &--text {
+      color: var(--Dark-Grayish-Blue);
+      letter-spacing: 0.1rem;
+      word-spacing: 0.3rem;
+    }
+  }
+
+  @include u.breakpoint(large) {
+    --margin: 10rem;
+    margin: 10rem var(--margin) 0 var(--margin);
+
+    max-width: 35rem;
+
+    &__title {
+      font-size: 2.3rem;
+    }
+
+    &__text {
+      max-width: 20rem;
+    }
+  }
+}
+
+.svgs {
+  overflow: hidden;
+  margin-left: calc(var(--margin) - 1.6rem);
+
+  img {
+    height: 17.1875rem;
+  }
+
+  @include u.breakpoint(large) {
+    height: 50rem;
+
+    img {
+      position: relative;
+      top: 6.25rem;
+      right: -8.4375rem;
+      height: 35rem;
+    }
+  }
+}
